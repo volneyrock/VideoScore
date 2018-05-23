@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <h3>Popular Themes:</h3>
+</div>
+
+<div class="row">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Score</th>              
+            </tr>
+          </thead>
+          <tbody>
+            {% for t in themes %}
+            <tr>
+                <td>{{ t.id }}</td>
+                <td>{{ t.name }}</td>
+                <td>{{ t.score }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+      </div>
+{% endblock %}
